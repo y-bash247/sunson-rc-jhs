@@ -1,0 +1,461 @@
+@import url('https:fonts.googleapis.com/css2?family=Poppins:wght@400;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(20px);
+}
+
+.logo-pic img {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 4px;
+    left: 15px;
+}
+
+.logo-pic h2 {
+    font-size: 30px;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.attr {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    gap: -10px;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: 
+    flex; 
+    justify-content: center; 
+    align-items: center;
+    opacity: 0; 
+    pointer-events: none; 
+    transition: 0.3s;
+}
+.popup-box { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 5px; 
+}
+.overlay.open { 
+    opacity: 1; 
+    pointer-events: auto; 
+}
+.close-icon {
+     cursor: pointer; 
+     float: right; 
+    }
+.popupBtn {
+    position: absolute;
+    top: 45;
+    left: 40;
+    border: #0abf30;
+    width: 35px;
+}
+
+
+.user-auth {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.user-auth .login-btn-modal {
+    height: 28px;
+    padding: 0px 28px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.user-auth .login-btn-modal:hover {
+    background: #fff;
+    color: black;
+}
+
+.auth-modal .close-btn-modal:hover {
+    background: #f00;
+    color: black;
+
+}
+
+ section {
+    height: 100vh;
+    background: url('images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 100px;
+}
+
+section h1 {
+    position: absolute;
+    top: 80px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+} 
+
+.auth-modal {
+    position: fixed;
+    width: 420px;
+    height: 440px;
+    background: rgba(0, 0, 0, .3);
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    transform: scale(0);
+    align-items: center;
+    transition: height .2s ease, transform .5s ease;
+}
+
+.auth-modal.show {
+    transform: scale(1);
+}
+
+
+.auth-modal.slide {
+    height: 520px;
+}
+
+.auth-modal .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.auth-modal.slide .form-box.login,
+.auth-modal.slide .form-box.form-box.register {
+    transform: translateX(0);
+    transition: .18s ease;
+}
+
+.auth-modal.slide .form-box.login {
+    transform: translateX(-400px);
+    transition: none;
+}
+
+.auth-modal .form-box.register {
+    position: absolute;
+    transform: translateX(400px);
+
+}
+
+.form-box h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .3);
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cta-btn {
+    position: absolute;
+    top: 110px;
+    width: 35%;
+    height: 45px;
+    right: 180px;
+    background: #82f043;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 21px;
+    color: #222;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-modal.show{
+    transform: translateY(1);
+}
+
+.cta-btn:hover {
+    background: #eee;
+    color: black;
+}
+
+.klas {
+     background: linear-gradient(rgba(196, 81, 14, 0.5), rgba(92, 12, 36, 0.9)),
+                url(images/logo_1.jpg) no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    color: white;
+    padding: 0 20px;
+}
+
+.klas h3 {
+    position: absolute;
+    height: auto;
+    top: 110px;
+    left: 30px;
+    color: hsl(84, 63%, 67%);
+}
+
+.klas img {
+    position: absolute;
+    height: auto;
+    top: 485px;
+    right: 10px;
+    width: 80px;
+}
+
+.klas a {
+    position: absolute;
+    height: auto;
+    top: 570px;
+    right: 14px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid rgb(60, 57, 243);
+    border-radius: 8px;
+    padding: 1px 8px;
+    background-color: black;
+}
+
+.klas a:hover {
+    background: rgb(226, 226, 205);
+    color: black;
+}
+
+.best1 {
+    font-weight: bold;
+    color: black;
+    font-size: 13px;
+    
+}
+
+.form-box p {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.form-box p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-box p a:hover {
+    text-decoration: underline;
+}
+
+.auth-modal .close-btn-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    border-bottom-left-radius: 20px;
+    font-size: 35px;
+    color: #222;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile-box .avatar-circle {
+    position: absolute;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: #222;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.profile-box .dropdown {
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    padding: 8px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.profile-box.show .dropdown {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: .5s;
+}
+
+.profile-box .dropdown a {
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 2px 0;
+    transition: .2s;
+}
+
+.profile-box .dropdown a:hover {
+    background: #eee;
+}
+
+.alert-box {
+    position: fixed;
+    inset: 0;
+    top: 50px;
+    margin: 0 auto;
+    width: 350px;
+    height: 50px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0 15px;
+    z-index: 100;
+    overflow: hidden;
+    transform: translateY(calc(-100% - 35px));
+    transition: 1s ease;
+}
+
+.alert-box.show {
+    transform: translateY(0);
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #222;
+    font-weight: 500;
+}
+
+.alert::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #0abf30; animation: progress 6s linear forwards;
+}
+
+.alert.error::after {
+    background: #f00;
+} 
+
+@keyframes progress {
+    100% {width: 0;
+    }
+}
+
+.alert i {
+    font-size: 35px;
+    color: #0abf30;
+    margin-right: 8px;
+}
+
+.alert.error i {
+    color: #f00;
+}
+
+
+
+.container .footer-content {
+    background: none;
+    color: rgb(241, 232, 232);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+

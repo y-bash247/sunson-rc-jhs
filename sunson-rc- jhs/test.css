@@ -1,0 +1,201 @@
+Core Styling Rules & Variables
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --text-color: #2d3748;
+    --light-bg: #f7fafc;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.container a{
+    text-align: right;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+    color: white;
+}
+
+.container a:hover {
+    color: green;
+}
+
+
+
+
+
+/* Academics Card Deck */
+.academics-section {
+    background: url(images/academics.jpg) no-repeat center center/cover;
+    padding: 5rem 0;
+    height: auto;
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+
+
+/* Programs Card Deck */
+.programs-section-1 {
+    background: none;
+    padding: 5rem 0;
+    height: auto;
+}
+
+.programs-section-1 h2{
+    color: green;
+    align-items: center;
+    font-size: 33px;
+    text-align: center;
+}
+
+.card-1 a {
+    text-decoration: none;
+    border-radius: 7px;
+    color: black;
+    padding: 5px 30px;
+    font-size: 20px;
+    border: green;
+}
+
+.card-1 a:hover {
+    background-color: yellow;
+}
+
+h3 {
+    text-align: center;
+}
+
+.card-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card-1 {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content-1 h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+
+/* Notices Tab Component */
+.announcements-section {
+    padding: 5rem 0;
+    background: none;
+    border-color: green;
+}
+
+.notice-box {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.notice-tabs {
+    display: flex;
+    background: #edf2f7;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a5568;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: rgb(165, 241, 165);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.notice-content-wrapper {
+    padding: 2rem;
+}
+
+.notice-pane {
+    display: none;
+}
+
+.notice-pane.active {
+    display: block;
+}
+
+.notice-pane h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+
